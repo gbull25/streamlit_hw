@@ -7,7 +7,7 @@ import plotly.express as px
 
 @st.cache
 def convert_df(df):
-    return df.to_csv().encode('utf-8')
+    return df.to_csv(index=False).encode('utf-8')
 
 def gender_distribution(df):
     fig = px.histogram(df, x='GENDER', color ='GENDER', 
